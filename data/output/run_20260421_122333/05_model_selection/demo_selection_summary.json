@@ -1,0 +1,15 @@
+{
+  "criterion": "bic",
+  "rmse_max": 3.0,
+  "rmse_accept_curve": 2.5,
+  "prefer_curve_ratio": 1.2,
+  "circle_min_coverage": 0.85,
+  "line_like_line_rmse_max": 2.0,
+  "arc_prefer_ratio": 1.15,
+  "selected_count": 4,
+  "type_distribution": {
+    "line": 1,
+    "ellipse": 2,
+    "circle": 1
+  }
+}

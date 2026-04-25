@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+<g fill="none" stroke="red" stroke-width="1.5">
+<line x1="38.949" y1="300.155" x2="281.059" y2="379.820" />
+<ellipse cx="422.012" cy="338.519" rx="99.643" ry="101.605" transform="rotate(54.344 422.012 338.519)" />
+<ellipse cx="419.988" cy="160.001" rx="70.893" ry="120.843" transform="rotate(115.037 419.988 160.001)" />
+<path d="M 145.992 69.843 A 80.338 80.338 0 1 1 74.816 121.931" />
+</g></svg>

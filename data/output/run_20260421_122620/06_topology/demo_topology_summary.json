@@ -1,0 +1,6 @@
+{
+  "node_count": 5,
+  "edge_count": 4,
+  "snap_eps": 2.0,
+  "close_eps": 3.0
+}

@@ -1,0 +1,8 @@
+{
+  "criterion": "bic",
+  "rmse_max": 2.5,
+  "selected_count": 29,
+  "type_distribution": {
+    "line": 29
+  }
+}

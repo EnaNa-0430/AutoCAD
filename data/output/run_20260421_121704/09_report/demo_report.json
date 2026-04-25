@@ -1,0 +1,73 @@
+{
+  "sample_id": "demo",
+  "timings_sec": {
+    "load": 0.002855500000000011,
+    "m1_preprocess": 0.011419100000000015,
+    "m2_contours": 0.011774399999999963,
+    "m3_segmentation": 0.027768999999999988,
+    "m4_fitting": 10.0210467,
+    "m5_selection": 0.0020313000000005133,
+    "m6_topology": 0.0028245000000008957,
+    "m7_m8_export": 0.006561899999999454
+  },
+  "metrics": {
+    "global_rmse": 132.26389676567896,
+    "primitive_count": 6,
+    "param_total": 24
+  },
+  "extras": {
+    "contour_summary": {
+      "canny_t1": 40,
+      "canny_t2": 120,
+      "min_contour_len": 30,
+      "contour_count": 4,
+      "contour_length_min": 456,
+      "contour_length_max": 626,
+      "contour_length_mean": 529.25
+    },
+    "segment_summary": {
+      "segment_count": 6,
+      "avg_breakpoints_per_contour": 1.0,
+      "corner_angle_deg": 110.0,
+      "corner_window": 6,
+      "corner_min_gap": 12,
+      "min_segment_points": 20
+    },
+    "fit_summary": {
+      "segment_count": 6,
+      "candidate_total": 30,
+      "ransac_iter": 150,
+      "inlier_threshold": 1.5,
+      "model_order_closed": [
+        "circle",
+        "ellipse",
+        "arc",
+        "line"
+      ],
+      "model_order_open": [
+        "line",
+        "arc",
+        "circle",
+        "ellipse"
+      ]
+    },
+    "selection_summary": {
+      "criterion": "bic",
+      "rmse_max": 3.0,
+      "rmse_accept_curve": 2.5,
+      "prefer_curve_ratio": 1.2,
+      "selected_count": 6,
+      "type_distribution": {
+        "ellipse": 2,
+        "circle": 2,
+        "arc": 2
+      }
+    },
+    "topology_summary": {
+      "node_count": 6,
+      "edge_count": 6,
+      "snap_eps": 2.0,
+      "close_eps": 3.0
+    }
+  }
+}

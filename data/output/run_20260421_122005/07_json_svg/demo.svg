@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+<g fill="none" stroke="red" stroke-width="1.5">
+<circle cx="140.490" cy="147.409" r="70.658" />
+<circle cx="160.979" cy="152.928" r="90.769" />
+<circle cx="167.165" cy="155.260" r="96.318" />
+<ellipse cx="97.163" cy="90.933" rx="1.366" ry="10.311" transform="rotate(47.428 97.163 90.933)" />
+<circle cx="146.276" cy="148.222" r="76.417" />
+<ellipse cx="307.968" cy="119.978" rx="1.115" ry="8.464" transform="rotate(9.321 307.968 119.978)" />
+<line x1="306.591" y1="134.944" x2="310.287" y2="107.903" />
+<ellipse cx="317.516" cy="161.316" rx="1.254" ry="8.464" transform="rotate(150.685 317.516 161.316)" />
+<ellipse cx="328.566" cy="177.361" rx="1.071" ry="6.002" transform="rotate(142.303 328.566 177.361)" />
+<ellipse cx="336.801" cy="186.199" rx="1.380" ry="6.313" transform="rotate(135.000 336.801 186.199)" />
+<ellipse cx="346.190" cy="194.938" rx="1.093" ry="6.513" transform="rotate(132.660 346.190 194.938)" />
+<ellipse cx="376.476" cy="215.395" rx="1.500" ry="11.979" transform="rotate(116.353 376.476 215.395)" />
+<ellipse cx="423.123" cy="235.179" rx="1.353" ry="7.516" transform="rotate(102.885 423.123 235.179)" />
+<ellipse cx="443.186" cy="239.452" rx="1.398" ry="7.289" transform="rotate(94.540 443.186 239.452)" />
+<ellipse cx="462.016" cy="241.032" rx="1.175" ry="9.321" transform="rotate(90.465 462.016 241.032)" />
+<circle cx="469.509" cy="52.298" r="187.897" />
+<circle cx="411.948" cy="337.473" r="92.438" />
+<circle cx="424.062" cy="339.846" r="103.699" />
+<ellipse cx="326.694" cy="375.460" rx="1.260" ry="5.753" transform="rotate(163.767 326.694 375.460)" />
+<ellipse cx="331.146" cy="385.607" rx="1.267" ry="6.680" transform="rotate(156.198 331.146 385.607)" />
+<ellipse cx="344.566" cy="405.361" rx="1.071" ry="6.002" transform="rotate(142.303 344.566 405.361)" />
+<ellipse cx="352.641" cy="413.657" rx="1.303" ry="6.180" transform="rotate(130.686 352.641 413.657)" />
+<ellipse cx="365.340" cy="423.406" rx="1.163" ry="4.829" transform="rotate(126.037 365.340 423.406)" />
+<ellipse cx="374.302" cy="428.656" rx="1.494" ry="5.726" transform="rotate(116.358 374.302 428.656)" />
+<ellipse cx="382.933" cy="432.562" rx="1.418" ry="4.083" transform="rotate(112.834 382.933 432.562)" />
+<ellipse cx="396.826" cy="437.025" rx="1.494" ry="5.714" transform="rotate(100.146 396.826 437.025)" />
+<ellipse cx="405.841" cy="438.652" rx="1.457" ry="3.717" transform="rotate(93.182 405.841 438.652)" />
+<ellipse cx="419.238" cy="439.895" rx="1.353" ry="10.188" transform="rotate(91.329 419.238 439.895)" />
+<circle cx="420.259" cy="337.243" r="101.722" />
+</g></svg>

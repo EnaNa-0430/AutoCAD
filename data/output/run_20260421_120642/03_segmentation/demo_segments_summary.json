@@ -1,0 +1,7 @@
+{
+  "segment_count": 29,
+  "avg_breakpoints_per_contour": 291.75,
+  "curvature_threshold": 0.15,
+  "rdp_epsilon": 2.0,
+  "min_segment_points": 8
+}

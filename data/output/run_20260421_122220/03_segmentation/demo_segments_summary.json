@@ -1,0 +1,8 @@
+{
+  "segment_count": 4,
+  "avg_breakpoints_per_contour": 0.0,
+  "corner_angle_deg": 110,
+  "corner_window": 6,
+  "corner_min_gap": 12,
+  "min_segment_points": 20
+}

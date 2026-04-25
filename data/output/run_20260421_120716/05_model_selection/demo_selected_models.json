@@ -1,0 +1,585 @@
+{
+  "sample_id": "demo",
+  "selected": [
+    {
+      "segment_id": "1_0",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          354.0,
+          261.0
+        ],
+        "p2": [
+          342.0,
+          273.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -387.417717439148,
+      "inlier_ratio": 1.0,
+      "inlier_count": 13
+    },
+    {
+      "segment_id": "1_1",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          317.0,
+          331.0
+        ],
+        "p2": [
+          317.0,
+          348.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -543.6043282130526,
+      "inlier_ratio": 1.0,
+      "inlier_count": 18
+    },
+    {
+      "segment_id": "1_2",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          318.0,
+          349.0
+        ],
+        "p2": [
+          318.0,
+          356.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -233.5248181775074,
+      "inlier_ratio": 1.0,
+      "inlier_count": 8
+    },
+    {
+      "segment_id": "1_3",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          340.0,
+          405.0
+        ],
+        "p2": [
+          353.0,
+          418.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -418.5029835783827,
+      "inlier_ratio": 1.0,
+      "inlier_count": 14
+    },
+    {
+      "segment_id": "1_4",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          409.0,
+          442.0
+        ],
+        "p2": [
+          430.0,
+          442.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -669.7033136175943,
+      "inlier_ratio": 1.0,
+      "inlier_count": 22
+    },
+    {
+      "segment_id": "1_5",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          431.0,
+          441.0
+        ],
+        "p2": [
+          438.0,
+          441.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -233.5248181775074,
+      "inlier_ratio": 1.0,
+      "inlier_count": 8
+    },
+    {
+      "segment_id": "1_6",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          485.0,
+          420.0
+        ],
+        "p2": [
+          492.0,
+          413.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -233.5248181775074,
+      "inlier_ratio": 1.0,
+      "inlier_count": 8
+    },
+    {
+      "segment_id": "1_7",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          493.0,
+          412.0
+        ],
+        "p2": [
+          500.0,
+          405.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -233.5248181775074,
+      "inlier_ratio": 1.0,
+      "inlier_count": 8
+    },
+    {
+      "segment_id": "1_8",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          496.0,
+          401.0
+        ],
+        "p2": [
+          481.0,
+          416.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -480.9125799662137,
+      "inlier_ratio": 1.0,
+      "inlier_count": 16
+    },
+    {
+      "segment_id": "1_9",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          430.0,
+          437.0
+        ],
+        "p2": [
+          410.0,
+          437.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -638.0973697512445,
+      "inlier_ratio": 1.0,
+      "inlier_count": 21
+    },
+    {
+      "segment_id": "1_10",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          360.0,
+          417.0
+        ],
+        "p2": [
+          344.0,
+          401.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -512.2255591316285,
+      "inlier_ratio": 1.0,
+      "inlier_count": 17
+    },
+    {
+      "segment_id": "1_11",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          322.0,
+          348.0
+        ],
+        "p2": [
+          322.0,
+          332.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -512.2255591316285,
+      "inlier_ratio": 1.0,
+      "inlier_count": 17
+    },
+    {
+      "segment_id": "1_12",
+      "contour_id": 1,
+      "type": "line",
+      "params": {
+        "p1": [
+          343.0,
+          280.0
+        ],
+        "p2": [
+          358.0,
+          265.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -480.9125799662137,
+      "inlier_ratio": 1.0,
+      "inlier_count": 16
+    },
+    {
+      "segment_id": "2_13",
+      "contour_id": 2,
+      "type": "line",
+      "params": {
+        "p1": [
+          328.0,
+          181.0
+        ],
+        "p2": [
+          346.0,
+          199.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -575.044863848472,
+      "inlier_ratio": 1.0,
+      "inlier_count": 19
+    },
+    {
+      "segment_id": "2_14",
+      "contour_id": 2,
+      "type": "line",
+      "params": {
+        "p1": [
+          443.0,
+          242.0
+        ],
+        "p2": [
+          450.0,
+          242.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -233.5248181775074,
+      "inlier_ratio": 1.0,
+      "inlier_count": 8
+    },
+    {
+      "segment_id": "2_15",
+      "contour_id": 2,
+      "type": "line",
+      "params": {
+        "p1": [
+          451.0,
+          243.0
+        ],
+        "p2": [
+          478.0,
+          243.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -860.3059085105547,
+      "inlier_ratio": 1.0,
+      "inlier_count": 28
+    },
+    {
+      "segment_id": "2_16",
+      "contour_id": 2,
+      "type": "line",
+      "params": {
+        "p1": [
+          479.0,
+          242.0
+        ],
+        "p2": [
+          486.0,
+          242.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -233.5248181775074,
+      "inlier_ratio": 1.0,
+      "inlier_count": 8
+    },
+    {
+      "segment_id": "2_17",
+      "contour_id": 2,
+      "type": "line",
+      "params": {
+        "p1": [
+          535.0,
+          196.0
+        ],
+        "p2": [
+          535.0,
+          188.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -264.0597620847105,
+      "inlier_ratio": 1.0,
+      "inlier_count": 9
+    },
+    {
+      "segment_id": "2_18",
+      "contour_id": 2,
+      "type": "line",
+      "params": {
+        "p1": [
+          512.0,
+          139.0
+        ],
+        "p2": [
+          494.0,
+          121.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -575.044863848472,
+      "inlier_ratio": 1.0,
+      "inlier_count": 19
+    },
+    {
+      "segment_id": "2_19",
+      "contour_id": 2,
+      "type": "line",
+      "params": {
+        "p1": [
+          396.0,
+          77.0
+        ],
+        "p2": [
+          388.0,
+          77.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -264.0597620847105,
+      "inlier_ratio": 1.0,
+      "inlier_count": 9
+    },
+    {
+      "segment_id": "2_20",
+      "contour_id": 2,
+      "type": "line",
+      "params": {
+        "p1": [
+          387.0,
+          76.0
+        ],
+        "p2": [
+          364.0,
+          76.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -733.0616910499399,
+      "inlier_ratio": 1.0,
+      "inlier_count": 24
+    },
+    {
+      "segment_id": "3_21",
+      "contour_id": 3,
+      "type": "line",
+      "params": {
+        "p1": [
+          97.0,
+          86.0
+        ],
+        "p2": [
+          86.0,
+          97.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -356.4213198890226,
+      "inlier_ratio": 1.0,
+      "inlier_count": 12
+    },
+    {
+      "segment_id": "3_22",
+      "contour_id": 3,
+      "type": "line",
+      "params": {
+        "p1": [
+          67.0,
+          143.0
+        ],
+        "p2": [
+          67.0,
+          157.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -449.669969353257,
+      "inlier_ratio": 1.0,
+      "inlier_count": 15
+    },
+    {
+      "segment_id": "3_23",
+      "contour_id": 3,
+      "type": "line",
+      "params": {
+        "p1": [
+          86.0,
+          203.0
+        ],
+        "p2": [
+          97.0,
+          214.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -356.4213198890226,
+      "inlier_ratio": 1.0,
+      "inlier_count": 12
+    },
+    {
+      "segment_id": "3_24",
+      "contour_id": 3,
+      "type": "line",
+      "params": {
+        "p1": [
+          141.0,
+          232.0
+        ],
+        "p2": [
+          159.0,
+          232.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -575.044863848472,
+      "inlier_ratio": 1.0,
+      "inlier_count": 19
+    },
+    {
+      "segment_id": "3_25",
+      "contour_id": 3,
+      "type": "line",
+      "params": {
+        "p1": [
+          204.0,
+          213.0
+        ],
+        "p2": [
+          214.0,
+          203.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -325.5222897303994,
+      "inlier_ratio": 1.0,
+      "inlier_count": 11
+    },
+    {
+      "segment_id": "3_26",
+      "contour_id": 3,
+      "type": "line",
+      "params": {
+        "p1": [
+          232.0,
+          159.0
+        ],
+        "p2": [
+          232.0,
+          141.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -575.044863848472,
+      "inlier_ratio": 1.0,
+      "inlier_count": 19
+    },
+    {
+      "segment_id": "3_27",
+      "contour_id": 3,
+      "type": "line",
+      "params": {
+        "p1": [
+          214.0,
+          97.0
+        ],
+        "p2": [
+          204.0,
+          87.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -325.5222897303994,
+      "inlier_ratio": 1.0,
+      "inlier_count": 11
+    },
+    {
+      "segment_id": "3_28",
+      "contour_id": 3,
+      "type": "line",
+      "params": {
+        "p1": [
+          157.0,
+          67.0
+        ],
+        "p2": [
+          144.0,
+          67.0
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.0,
+      "score": -418.5029835783827,
+      "inlier_ratio": 1.0,
+      "inlier_count": 14
+    }
+  ]
+}

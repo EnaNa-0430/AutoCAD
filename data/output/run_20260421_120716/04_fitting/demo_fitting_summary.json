@@ -1,0 +1,6 @@
+{
+  "segment_count": 29,
+  "candidate_total": 100,
+  "ransac_iter": 150,
+  "inlier_threshold": 1.5
+}

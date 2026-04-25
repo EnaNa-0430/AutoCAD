@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+<g fill="none" stroke="red" stroke-width="1.5">
+<ellipse cx="157.027" cy="339.999" rx="0.395" ry="132.147" transform="rotate(108.444 157.027 339.999)" />
+<ellipse cx="171.787" cy="343.358" rx="1.022" ry="117.486" transform="rotate(108.585 171.787 343.358)" />
+<circle cx="419.893" cy="340.076" r="100.753" />
+<circle cx="420.168" cy="339.828" r="99.167" />
+<path d="M 307.759 145.651 A 179.821 179.821 0 1 1 489.067 240.544" />
+<path d="M 150.000 69.475 A 80.455 80.455 0 0 1 157.019 69.776" />
+</g></svg>

@@ -1,0 +1,17 @@
+{
+  "segment_count": 4,
+  "candidate_total": 16,
+  "ransac_iter": 150,
+  "inlier_threshold": 1.5,
+  "model_order_closed": [
+    "circle",
+    "ellipse",
+    "line"
+  ],
+  "model_order_open": [
+    "line",
+    "arc",
+    "circle",
+    "ellipse"
+  ]
+}
