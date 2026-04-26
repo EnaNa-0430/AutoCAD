@@ -27,6 +27,15 @@ def select_models(
     prefer_curve_ratio = float(cfg.get("prefer_curve_ratio", 1.2))
     circle_min_coverage = float(cfg.get("circle_min_coverage", 0.85))
     line_like_line_rmse_max = float(cfg.get("line_like_line_rmse_max", rmse_max))
+    min_inlier_ratio_default = float(cfg.get("min_inlier_ratio_default", 0.5))
+    min_inlier_ratio_line = float(cfg.get("min_inlier_ratio_line", min_inlier_ratio_default))
+    min_inlier_ratio_arc = float(cfg.get("min_inlier_ratio_arc", min_inlier_ratio_default))
+    min_inlier_ratio_circle = float(cfg.get("min_inlier_ratio_circle", 0.65))
+    min_inlier_ratio_ellipse = float(cfg.get("min_inlier_ratio_ellipse", 0.72))
+    bspline_prefer_ratio = float(cfg.get("bspline_prefer_ratio", 0.9))
+    bspline_prefer_rmse_min = float(cfg.get("bspline_prefer_rmse_min", 0.6))
+    stroke_like_bspline_ratio = float(cfg.get("stroke_like_bspline_ratio", 2.6))
+    stroke_like_line_rmse_max = float(cfg.get("stroke_like_line_rmse_max", 0.35))
     arc_prefer_ratio = float(cfg.get("arc_prefer_ratio", 1.15))
     arc_prefer_min_coverage = float(cfg.get("arc_prefer_min_coverage", 0.25))
     arc_prefer_max_coverage = float(cfg.get("arc_prefer_max_coverage", 0.8))
@@ -40,8 +49,9 @@ def select_models(
 
     for item in fit_candidates:
         sid = item["segment_id"]
-        is_closed = bool(item.get("is_closed", False) or item.get("closed_parent", False))
+        is_closed = bool(item.get("is_closed", False))
         line_like = bool(item.get("line_like", False))
+        stroke_like = bool(item.get("stroke_like", False))
         all_cands = [c for c in item.get("candidates", []) if c.get("rmse") is not None and math.isfinite(float(c.get("rmse", 1e9)))]
         analytic = [c for c in all_cands if c.get("type") != "bspline"]
         bspline = [c for c in all_cands if c.get("type") == "bspline"]
@@ -49,6 +59,21 @@ def select_models(
         if feasible:
             filtered = []
             for c in feasible:
+                ctype = str(c.get("type", ""))
+                inlier_ratio = c.get("inlier_ratio")
+                if inlier_ratio is not None:
+                    ratio_val = float(inlier_ratio)
+                    min_ratio = min_inlier_ratio_default
+                    if ctype == "line":
+                        min_ratio = min_inlier_ratio_line
+                    elif ctype == "arc":
+                        min_ratio = min_inlier_ratio_arc
+                    elif ctype == "circle":
+                        min_ratio = min_inlier_ratio_circle
+                    elif ctype == "ellipse":
+                        min_ratio = min_inlier_ratio_ellipse
+                    if ratio_val < min_ratio:
+                        continue
                 if c.get("type") == "circle":
                     cov = float(c.get("coverage", 1.0))
                     if cov < circle_min_coverage:
@@ -58,8 +83,7 @@ def select_models(
                     if cov < arc_prefer_min_coverage or cov > 0.85:
                         continue
                 filtered.append(c)
-            if filtered:
-                feasible = filtered
+            feasible = filtered
 
         if not feasible and not bspline:
             selected.append(
@@ -78,7 +102,7 @@ def select_models(
 
         n = seg_len.get(sid, 10)
         if feasible:
-            if line_like:
+            if line_like and (not stroke_like):
                 line_feasible = [c for c in feasible if c.get("type") == "line" and float(c.get("rmse", 1e9)) <= line_like_line_rmse_max]
                 if line_feasible:
                     best = min(line_feasible, key=lambda c: _score_candidate(c, criterion, n, lam))
@@ -170,6 +194,23 @@ def select_models(
                     curve_scored = [(c, _score_candidate(c, criterion, n, lam)) for c in curve_good]
                     curve_scored.sort(key=lambda x: x[1])
                     best, best_score = curve_scored[0]
+
+            if bspline:
+                best_bspline = min(bspline, key=lambda c: float(c["rmse"]))
+                if float(best["rmse"]) >= bspline_prefer_rmse_min and float(best_bspline["rmse"]) <= float(best["rmse"]) * bspline_prefer_ratio:
+                    best = best_bspline
+                    best_score = _score_candidate(best, criterion, n, lam)
+                elif (not line_like) and best.get("type") == "line" and float(best_bspline["rmse"]) <= float(best["rmse"]) * 1.2:
+                    best = best_bspline
+                    best_score = _score_candidate(best, criterion, n, lam)
+                elif (
+                    stroke_like
+                    and best.get("type") == "line"
+                    and float(best["rmse"]) > stroke_like_line_rmse_max
+                    and float(best_bspline["rmse"]) <= float(best["rmse"]) * stroke_like_bspline_ratio
+                ):
+                    best = best_bspline
+                    best_score = _score_candidate(best, criterion, n, lam)
         else:
             best = min(bspline, key=lambda c: float(c["rmse"]))
             best_score = _score_candidate(best, criterion, n, lam)
@@ -196,6 +237,15 @@ def select_models(
         "prefer_curve_ratio": prefer_curve_ratio,
         "circle_min_coverage": circle_min_coverage,
         "line_like_line_rmse_max": line_like_line_rmse_max,
+        "min_inlier_ratio_default": min_inlier_ratio_default,
+        "min_inlier_ratio_line": min_inlier_ratio_line,
+        "min_inlier_ratio_arc": min_inlier_ratio_arc,
+        "min_inlier_ratio_circle": min_inlier_ratio_circle,
+        "min_inlier_ratio_ellipse": min_inlier_ratio_ellipse,
+        "bspline_prefer_ratio": bspline_prefer_ratio,
+        "bspline_prefer_rmse_min": bspline_prefer_rmse_min,
+        "stroke_like_bspline_ratio": stroke_like_bspline_ratio,
+        "stroke_like_line_rmse_max": stroke_like_line_rmse_max,
         "arc_prefer_ratio": arc_prefer_ratio,
         "arc_prefer_min_coverage": arc_prefer_min_coverage,
         "arc_prefer_max_coverage": arc_prefer_max_coverage,

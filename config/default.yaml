@@ -14,6 +14,7 @@ segment:
   corner_angle_deg: 110
   corner_window: 6
   corner_min_gap: 12
+  stroke_like_elongation_min: 2.2
   min_segment_points: 20
 
 fit:
@@ -21,7 +22,20 @@ fit:
   ransac_iter: 150
   inlier_threshold: 1.5
   bspline_ctrl_points: 8
+  bspline_approx_eps_ratio: 0.01
+  bspline_backtrack_drop_ratio: 0.12
+  bspline_backtrack_drop_abs: 20.0
+  bspline_head_keep_span_min: 30.0
+  bspline_head_keep_ratio_min: 0.8
+  bspline_stroke_inlier_ratio: 0.55
+  bspline_stroke_rebound_abs: 18.0
+  bspline_stroke_rebound_tail_max_points: 3
+  bspline_stroke_spur_max_drop_each_side: 2
+  bspline_stroke_spur_improve_ratio: 0.02
+  bspline_stroke_smooth_samples: 96
+  bspline_stroke_smooth_passes: 3
   line_like_elongation: 8.0
+  ellipse_axis_bbox_ratio_max: 2.5
   closed_model_order: [circle, ellipse, arc, line]
   open_model_order: [line, arc, circle, ellipse]
 
@@ -32,6 +46,15 @@ selection:
   prefer_curve_ratio: 1.2
   circle_min_coverage: 0.7
   line_like_line_rmse_max: 2.0
+  min_inlier_ratio_default: 0.5
+  min_inlier_ratio_line: 0.45
+  min_inlier_ratio_arc: 0.5
+  min_inlier_ratio_circle: 0.65
+  min_inlier_ratio_ellipse: 0.72
+  bspline_prefer_ratio: 0.9
+  bspline_prefer_rmse_min: 0.6
+  stroke_like_bspline_ratio: 2.6
+  stroke_like_line_rmse_max: 0.35
   arc_prefer_ratio: 1.15
   arc_prefer_min_coverage: 0.25
   arc_prefer_max_coverage: 0.8

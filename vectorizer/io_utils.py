@@ -98,6 +98,38 @@ def rdp(points: np.ndarray, epsilon: float) -> np.ndarray:
     return np.vstack((a, b))
 
 
+def _catmull_rom_points(ctrl: np.ndarray, closed: bool, samples_per_span: int = 12) -> np.ndarray:
+    if len(ctrl) < 2:
+        return ctrl
+    pts: List[np.ndarray] = []
+    n = len(ctrl)
+
+    def _get(i: int) -> np.ndarray:
+        if closed:
+            return ctrl[i % n]
+        return ctrl[int(np.clip(i, 0, n - 1))]
+
+    span_count = n if closed else (n - 1)
+    for i in range(span_count):
+        p0 = _get(i - 1)
+        p1 = _get(i)
+        p2 = _get(i + 1)
+        p3 = _get(i + 2)
+        for j in range(samples_per_span):
+            t = float(j) / float(samples_per_span)
+            t2 = t * t
+            t3 = t2 * t
+            pt = 0.5 * (
+                (2.0 * p1)
+                + (-p0 + p2) * t
+                + (2.0 * p0 - 5.0 * p1 + 4.0 * p2 - p3) * t2
+                + (-p0 + 3.0 * p1 - 3.0 * p2 + p3) * t3
+            )
+            pts.append(pt)
+    pts.append(ctrl[0] if closed else ctrl[-1])
+    return np.array(pts, dtype=np.float64)
+
+
 def polyline_from_primitives(primitives: Iterable[Dict[str, Any]], step_deg: int = 4) -> List[Tuple[int, int, int, int]]:
     segments: List[Tuple[int, int, int, int]] = []
     for p in primitives:
@@ -154,12 +186,11 @@ def polyline_from_primitives(primitives: Iterable[Dict[str, Any]], step_deg: int
         elif t == "bspline":
             ctrl = p.get("control_points", [])
             if len(ctrl) >= 2:
-                for i in range(len(ctrl) - 1):
-                    x1, y1 = ctrl[i]
-                    x2, y2 = ctrl[i + 1]
-                    segments.append((int(round(x1)), int(round(y1)), int(round(x2)), int(round(y2))))
-                if bool(p.get("closed", False)):
-                    x1, y1 = ctrl[-1]
-                    x2, y2 = ctrl[0]
+                closed = bool(p.get("closed", False))
+                ctrl_np = np.array(ctrl, dtype=np.float64)
+                curve = _catmull_rom_points(ctrl_np, closed=closed, samples_per_span=12)
+                for i in range(len(curve) - 1):
+                    x1, y1 = curve[i]
+                    x2, y2 = curve[i + 1]
                     segments.append((int(round(x1)), int(round(y1)), int(round(x2)), int(round(y2))))
     return segments

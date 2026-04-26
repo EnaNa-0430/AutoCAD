@@ -1,0 +1,72 @@
+{
+  "sample_id": "demo7",
+  "selected": [
+    {
+      "segment_id": "0_0",
+      "contour_id": 0,
+      "type": "bspline",
+      "params": {
+        "degree": 3,
+        "closed": true,
+        "control_points": [
+          [
+            1264.0,
+            391.0
+          ],
+          [
+            1223.0,
+            343.0
+          ],
+          [
+            1194.0,
+            332.0
+          ],
+          [
+            1159.0,
+            365.0
+          ],
+          [
+            1112.0,
+            442.0
+          ],
+          [
+            1204.0,
+            453.0
+          ],
+          [
+            1230.0,
+            450.0
+          ],
+          [
+            1246.0,
+            435.0
+          ]
+        ],
+        "approx_eps_ratio": 0.01,
+        "stroke_inlier_ratio": 0.55
+      },
+      "param_count": 16,
+      "rmse": 1.2628764448964345,
+      "score": 268.85569558997537,
+      "inlier_ratio": null,
+      "inlier_count": null
+    },
+    {
+      "segment_id": "1_1",
+      "contour_id": 1,
+      "type": "ellipse",
+      "params": {
+        "cx": 655.0218505859375,
+        "cy": 518.521240234375,
+        "ax": 346.542236328125,
+        "by": 412.04736328125,
+        "angle": 89.994384765625
+      },
+      "param_count": 5,
+      "rmse": 0.49164251377348756,
+      "score": -3020.3193439376555,
+      "inlier_ratio": 0.999535747446611,
+      "inlier_count": 2153
+    }
+  ]
+}

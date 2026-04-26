@@ -1,0 +1,9 @@
+{
+  "canny_t1": 40,
+  "canny_t2": 120,
+  "min_contour_len": 30,
+  "contour_count": 4,
+  "contour_length_min": 480,
+  "contour_length_max": 1922,
+  "contour_length_mean": 945.25
+}

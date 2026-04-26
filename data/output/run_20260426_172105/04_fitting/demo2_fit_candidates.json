@@ -1,0 +1,731 @@
+{
+  "sample_id": "demo2",
+  "items": [
+    {
+      "segment_id": "0_0",
+      "contour_id": 0,
+      "closed_parent": true,
+      "stroke_like": false,
+      "is_closed": false,
+      "line_like": true,
+      "elongation": 1925.456492634642,
+      "point_count": 353,
+      "candidates": [
+        {
+          "type": "line",
+          "params": {
+            "p1": [
+              242.99439055128533,
+              657.0000001362238
+            ],
+            "p2": [
+              243.01128572053662,
+              304.9999521385904
+            ]
+          },
+          "param_count": 2,
+          "rmse": 0.05292349972131165,
+          "inlier_ratio": 1.0,
+          "inlier_count": 353
+        },
+        {
+          "type": "arc",
+          "params": {
+            "cx": -440.2820068001714,
+            "cy": 528.6974823882666,
+            "r": 688.0177086860647,
+            "start_angle": 352.2741334328352,
+            "end_angle": 7.693343320986969,
+            "span": 15.419209888151784
+          },
+          "param_count": 4,
+          "rmse": 0.8590850238157995,
+          "coverage": 0.042831138578199396,
+          "inlier_ratio": 0.14447592067988668,
+          "inlier_count": 51
+        },
+        {
+          "type": "circle",
+          "params": {
+            "cx": 10656.999999952219,
+            "cy": 481.5000000000009,
+            "r": 10414.495727062584
+          },
+          "param_count": 3,
+          "rmse": 0.44274141045538135,
+          "inlier_ratio": 1.0,
+          "inlier_count": 353,
+          "coverage": 0.005379287873148857
+        },
+        {
+          "type": "bspline",
+          "params": {
+            "degree": 3,
+            "closed": false,
+            "control_points": [
+              [
+                244.0,
+                305.0
+              ],
+              [
+                243.0,
+                355.0
+              ],
+              [
+                243.0,
+                405.0
+              ],
+              [
+                243.0,
+                455.0
+              ],
+              [
+                243.0,
+                506.0
+              ],
+              [
+                243.0,
+                556.0
+              ],
+              [
+                243.0,
+                606.0
+              ],
+              [
+                243.0,
+                657.0
+              ]
+            ],
+            "approx_eps_ratio": 0.01
+          },
+          "param_count": 16,
+          "rmse": 0.2139837606435724
+        }
+      ]
+    },
+    {
+      "segment_id": "0_1",
+      "contour_id": 0,
+      "closed_parent": true,
+      "stroke_like": false,
+      "is_closed": false,
+      "line_like": true,
+      "elongation": 4363.434886649432,
+      "point_count": 610,
+      "candidates": [
+        {
+          "type": "line",
+          "params": {
+            "p1": [
+              242.99998392822192,
+              657.9934501159673
+            ],
+            "p2": [
+              852.0000000265292,
+              658.0032539853369
+            ]
+          },
+          "param_count": 2,
+          "rmse": 0.04035617583647163,
+          "inlier_ratio": 1.0,
+          "inlier_count": 610
+        },
+        {
+          "type": "arc",
+          "params": {
+            "cx": 384.65144790857676,
+            "cy": 218.28280772994893,
+            "r": 442.27173366272154,
+            "start_angle": 82.18531880450871,
+            "end_angle": 97.85341568630827,
+            "span": 15.668096881799556
+          },
+          "param_count": 4,
+          "rmse": 0.8719667299549221,
+          "coverage": 0.0435224913383321,
+          "inlier_ratio": 0.09344262295081968,
+          "inlier_count": 57
+        },
+        {
+          "type": "circle",
+          "params": {
+            "cx": 547.9999999999808,
+            "cy": -30401.66666661348,
+            "r": 31060.164199627266
+          },
+          "param_count": 3,
+          "rmse": 0.44463475217526227,
+          "inlier_ratio": 1.0,
+          "inlier_count": 610,
+          "coverage": 0.003120568519091983
+        },
+        {
+          "type": "bspline",
+          "params": {
+            "degree": 3,
+            "closed": false,
+            "control_points": [
+              [
+                243.0,
+                657.0
+              ],
+              [
+                330.0,
+                658.0
+              ],
+              [
+                417.0,
+                658.0
+              ],
+              [
+                504.0,
+                658.0
+              ],
+              [
+                591.0,
+                658.0
+              ],
+              [
+                678.0,
+                658.0
+              ],
+              [
+                765.0,
+                658.0
+              ],
+              [
+                852.0,
+                658.0
+              ]
+            ],
+            "approx_eps_ratio": 0.01
+          },
+          "param_count": 16,
+          "rmse": 0.21614411780808615
+        }
+      ]
+    },
+    {
+      "segment_id": "0_2",
+      "contour_id": 0,
+      "closed_parent": true,
+      "stroke_like": false,
+      "is_closed": false,
+      "line_like": true,
+      "elongation": 1925.456492634642,
+      "point_count": 353,
+      "candidates": [
+        {
+          "type": "line",
+          "params": {
+            "p1": [
+              852.9887447970415,
+              658.0000478628745
+            ],
+            "p2": [
+              853.0056399662927,
+              305.999999865241
+            ]
+          },
+          "param_count": 2,
+          "rmse": 0.05292350547914153,
+          "inlier_ratio": 1.0,
+          "inlier_count": 353
+        },
+        {
+          "type": "arc",
+          "params": {
+            "cx": 276.4745044587232,
+            "cy": 510.0000000000001,
+            "r": 580.1192236737043,
+            "start_angle": 352.3926695744947,
+            "end_angle": 7.607330425505268,
+            "span": 15.214660851010592
+          },
+          "param_count": 4,
+          "rmse": 0.8604622766005428,
+          "coverage": 0.042262946808362754,
+          "inlier_ratio": 0.1529745042492918,
+          "inlier_count": 54
+        },
+        {
+          "type": "circle",
+          "params": {
+            "cx": 241.71328154500475,
+            "cy": 562.5,
+            "r": 612.235005663247
+          },
+          "param_count": 3,
+          "rmse": 0.8470534441733392,
+          "inlier_ratio": 0.3342776203966006,
+          "inlier_count": 118,
+          "coverage": 0.08793606664565551
+        },
+        {
+          "type": "bspline",
+          "params": {
+            "degree": 3,
+            "closed": false,
+            "control_points": [
+              [
+                852.0,
+                658.0
+              ],
+              [
+                853.0,
+                608.0
+              ],
+              [
+                853.0,
+                558.0
+              ],
+              [
+                853.0,
+                508.0
+              ],
+              [
+                853.0,
+                457.0
+              ],
+              [
+                853.0,
+                407.0
+              ],
+              [
+                853.0,
+                357.0
+              ],
+              [
+                853.0,
+                306.0
+              ]
+            ],
+            "approx_eps_ratio": 0.01
+          },
+          "param_count": 16,
+          "rmse": 0.21398376064357288
+        }
+      ]
+    },
+    {
+      "segment_id": "0_3",
+      "contour_id": 0,
+      "closed_parent": true,
+      "stroke_like": false,
+      "is_closed": false,
+      "line_like": true,
+      "elongation": 4363.434886649432,
+      "point_count": 610,
+      "candidates": [
+        {
+          "type": "line",
+          "params": {
+            "p1": [
+              243.99999997347084,
+              304.99674601466313
+            ],
+            "p2": [
+              853.0000160717781,
+              305.00654988403267
+            ]
+          },
+          "param_count": 2,
+          "rmse": 0.04035617583647163,
+          "inlier_ratio": 1.0,
+          "inlier_count": 610
+        },
+        {
+          "type": "arc",
+          "params": {
+            "cx": 675.5000000000001,
+            "cy": -577.20008814811,
+            "r": 888.5151915012672,
+            "start_angle": 82.4134403907413,
+            "end_angle": 97.5865596092587,
+            "span": 15.1731192185174
+          },
+          "param_count": 4,
+          "rmse": 0.8565929380825223,
+          "coverage": 0.04214755338477055,
+          "inlier_ratio": 0.08196721311475409,
+          "inlier_count": 50
+        },
+        {
+          "type": "circle",
+          "params": {
+            "cx": 765.9999999999994,
+            "cy": -806.110948371543,
+            "r": 1112.011483569801
+          },
+          "param_count": 3,
+          "rmse": 0.8049012076269066,
+          "inlier_ratio": 0.2540983606557377,
+          "inlier_count": 155,
+          "coverage": 0.08232571464766494
+        },
+        {
+          "type": "bspline",
+          "params": {
+            "degree": 3,
+            "closed": false,
+            "control_points": [
+              [
+                853.0,
+                306.0
+              ],
+              [
+                766.0,
+                305.0
+              ],
+              [
+                679.0,
+                305.0
+              ],
+              [
+                592.0,
+                305.0
+              ],
+              [
+                505.0,
+                305.0
+              ],
+              [
+                418.0,
+                305.0
+              ],
+              [
+                331.0,
+                305.0
+              ],
+              [
+                244.0,
+                305.0
+              ]
+            ],
+            "approx_eps_ratio": 0.01
+          },
+          "param_count": 16,
+          "rmse": 0.21614411780808565
+        }
+      ]
+    },
+    {
+      "segment_id": "1_4",
+      "contour_id": 1,
+      "closed_parent": true,
+      "stroke_like": false,
+      "is_closed": true,
+      "line_like": false,
+      "elongation": 1.8085036685074996,
+      "point_count": 622,
+      "candidates": [
+        {
+          "type": "circle",
+          "params": {
+            "cx": 931.0571430606676,
+            "cy": 37.05756674035024,
+            "r": 266.7110275541777
+          },
+          "param_count": 3,
+          "rmse": 0.6906807261429297,
+          "inlier_ratio": 0.39389067524115756,
+          "inlier_count": 245,
+          "coverage": 0.20183011962112987
+        },
+        {
+          "type": "ellipse",
+          "params": {
+            "cx": 931.028076171875,
+            "cy": 240.525146484375,
+            "ax": 62.53921127319336,
+            "by": 142.1845245361328,
+            "angle": 90.00341796875
+          },
+          "param_count": 5,
+          "rmse": 0.4549446837697186,
+          "inlier_ratio": 1.0,
+          "inlier_count": 622
+        },
+        {
+          "type": "arc",
+          "params": {
+            "cx": 931.0178693232602,
+            "cy": 450.41784743783523,
+            "r": 272.94287996005505,
+            "start_angle": 243.28219678550516,
+            "end_angle": 296.7110633659271,
+            "span": 53.42886658042187
+          },
+          "param_count": 4,
+          "rmse": 0.5775696170930622,
+          "coverage": 0.14841351827894964,
+          "inlier_ratio": 0.39067524115755625,
+          "inlier_count": 243
+        },
+        {
+          "type": "line",
+          "params": {
+            "p1": [
+              915.1079098931066,
+              176.6198994260229
+            ],
+            "p2": [
+              994.0941512100786,
+              182.79589378198744
+            ]
+          },
+          "param_count": 2,
+          "rmse": 0.7604964861621273,
+          "inlier_ratio": 0.12861736334405144,
+          "inlier_count": 80
+        },
+        {
+          "type": "bspline",
+          "params": {
+            "degree": 3,
+            "closed": true,
+            "control_points": [
+              [
+                789.0,
+                237.0
+              ],
+              [
+                795.0,
+                259.0
+              ],
+              [
+                818.0,
+                279.0
+              ],
+              [
+                914.0,
+                303.0
+              ],
+              [
+                1025.0,
+                288.0
+              ],
+              [
+                1056.0,
+                271.0
+              ],
+              [
+                1073.0,
+                244.0
+              ],
+              [
+                1067.0,
+                222.0
+              ],
+              [
+                1042.0,
+                201.0
+              ],
+              [
+                948.0,
+                178.0
+              ],
+              [
+                840.0,
+                192.0
+              ],
+              [
+                805.0,
+                211.0
+              ]
+            ],
+            "approx_eps_ratio": 0.01
+          },
+          "param_count": 24,
+          "rmse": 3.0016945334402614
+        }
+      ]
+    },
+    {
+      "segment_id": "2_5",
+      "contour_id": 2,
+      "closed_parent": true,
+      "stroke_like": true,
+      "is_closed": false,
+      "line_like": true,
+      "elongation": 37.18239975496119,
+      "point_count": 480,
+      "candidates": [
+        {
+          "type": "line",
+          "params": {
+            "p1": [
+              165.2226017037262,
+              393.14216926046174
+            ],
+            "p2": [
+              280.31715185634516,
+              154.67043232653683
+            ]
+          },
+          "param_count": 2,
+          "rmse": 0.3029034817870276,
+          "inlier_ratio": 0.5,
+          "inlier_count": 240
+        },
+        {
+          "type": "arc",
+          "params": {
+            "cx": 676.5882652131818,
+            "cy": 503.64833156741327,
+            "r": 509.50909524530425,
+            "start_angle": 196.5672925245543,
+            "end_angle": 214.95861792645445,
+            "span": 18.391325401900133
+          },
+          "param_count": 4,
+          "rmse": 0.8139597537559972,
+          "coverage": 0.051087015005278145,
+          "inlier_ratio": 0.275,
+          "inlier_count": 132
+        },
+        {
+          "type": "circle",
+          "params": {
+            "cx": 757.2083614412015,
+            "cy": 532.1043556746711,
+            "r": 598.5370052581563
+          },
+          "param_count": 3,
+          "rmse": 4.433390082526353,
+          "inlier_ratio": 0.5020833333333333,
+          "inlier_count": 241,
+          "coverage": 0.07021148474987911
+        },
+        {
+          "type": "ellipse",
+          "params": {
+            "cx": 256.1309509277344,
+            "cy": 204.9166717529297,
+            "ax": 0.4691525101661682,
+            "by": 3.1552894115448,
+            "angle": 20.938602447509766
+          },
+          "param_count": 5,
+          "rmse": 0.22113758758540525,
+          "inlier_ratio": 0.014583333333333334,
+          "inlier_count": 7
+        },
+        {
+          "type": "bspline",
+          "params": {
+            "degree": 3,
+            "closed": false,
+            "control_points": [
+              [
+                185.0,
+                362.0
+              ],
+              [
+                218.0,
+                293.0
+              ],
+              [
+                251.0,
+                225.0
+              ],
+              [
+                282.0,
+                156.0
+              ]
+            ],
+            "approx_eps_ratio": 0.01
+          },
+          "param_count": 8,
+          "rmse": 8.656247565296626
+        }
+      ]
+    },
+    {
+      "segment_id": "3_6",
+      "contour_id": 3,
+      "closed_parent": true,
+      "stroke_like": true,
+      "is_closed": false,
+      "line_like": false,
+      "elongation": 2.404243575352176,
+      "point_count": 757,
+      "candidates": [
+        {
+          "type": "line",
+          "params": {
+            "p1": [
+              408.2480568167312,
+              175.26305394717147
+            ],
+            "p2": [
+              641.41157516703,
+              253.74811302837747
+            ]
+          },
+          "param_count": 2,
+          "rmse": 0.6859912748483535,
+          "inlier_ratio": 0.2985468956406869,
+          "inlier_count": 226
+        },
+        {
+          "type": "arc",
+          "params": {
+            "cx": 654.6974833136973,
+            "cy": -214.71285454255087,
+            "r": 453.9297434146967,
+            "start_angle": 88.94934318784595,
+            "end_angle": 119.41767646132269,
+            "span": 30.46833327347673
+          },
+          "param_count": 4,
+          "rmse": 0.8427055071971049,
+          "coverage": 0.08463425909299092,
+          "inlier_ratio": 0.18229854689564068,
+          "inlier_count": 138
+        },
+        {
+          "type": "circle",
+          "params": {
+            "cx": 861.6833972667789,
+            "cy": -894.7631913413818,
+            "r": 1163.6869008028768
+          },
+          "param_count": 3,
+          "rmse": 0.7066675392839837,
+          "inlier_ratio": 0.2985468956406869,
+          "inlier_count": 226,
+          "coverage": 0.036318121798840745
+        },
+        {
+          "type": "bspline",
+          "params": {
+            "degree": 3,
+            "closed": false,
+            "control_points": [
+              [
+                407.0,
+                177.0
+              ],
+              [
+                590.0,
+                241.0
+              ],
+              [
+                655.0,
+                251.0
+              ],
+              [
+                656.0,
+                218.0
+              ]
+            ],
+            "approx_eps_ratio": 0.01
+          },
+          "param_count": 8,
+          "rmse": 35.55811707905669
+        }
+      ]
+    }
+  ]
+}

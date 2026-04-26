@@ -1,0 +1,7 @@
+{
+  "blur_ksize": 3,
+  "adaptive_block_size": 21,
+  "adaptive_C": 3.0,
+  "morph_kernel": 3,
+  "foreground_ratio": 0.011006673177083334
+}

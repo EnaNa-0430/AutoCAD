@@ -1,0 +1,31 @@
+{
+  "segment_count": 2,
+  "candidate_total": 10,
+  "ransac_iter": 150,
+  "inlier_threshold": 1.5,
+  "model_order_closed": [
+    "circle",
+    "ellipse",
+    "arc",
+    "line"
+  ],
+  "model_order_open": [
+    "line",
+    "arc",
+    "circle",
+    "ellipse"
+  ],
+  "bspline_approx_eps_ratio": 0.01,
+  "bspline_backtrack_drop_ratio": 0.12,
+  "bspline_backtrack_drop_abs": 20.0,
+  "bspline_head_keep_span_min": 30.0,
+  "bspline_head_keep_ratio_min": 0.8,
+  "bspline_stroke_inlier_ratio": 0.55,
+  "bspline_stroke_rebound_abs": 18.0,
+  "bspline_stroke_rebound_tail_max_points": 3,
+  "bspline_stroke_spur_max_drop_each_side": 2,
+  "bspline_stroke_spur_improve_ratio": 0.02,
+  "bspline_stroke_smooth_samples": 96,
+  "bspline_stroke_smooth_passes": 3,
+  "ellipse_axis_bbox_ratio_max": 2.5
+}

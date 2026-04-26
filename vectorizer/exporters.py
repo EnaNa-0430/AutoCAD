@@ -4,6 +4,45 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 
+def _bspline_svg_path(ctrl: List[List[float]], closed: bool) -> str:
+    if len(ctrl) < 2:
+        return ""
+
+    pts = [[float(x), float(y)] for x, y in ctrl]
+    n = len(pts)
+
+    def _get(i: int) -> List[float]:
+        if closed:
+            return pts[i % n]
+        if i < 0:
+            return pts[0]
+        if i >= n:
+            return pts[-1]
+        return pts[i]
+
+    if closed:
+        start = pts[0]
+        spans = n
+    else:
+        start = pts[0]
+        spans = n - 1
+
+    d = [f"M {start[0]:.3f} {start[1]:.3f}"]
+    for i in range(spans):
+        p0 = _get(i - 1)
+        p1 = _get(i)
+        p2 = _get(i + 1)
+        p3 = _get(i + 2)
+        c1x = p1[0] + (p2[0] - p0[0]) / 6.0
+        c1y = p1[1] + (p2[1] - p0[1]) / 6.0
+        c2x = p2[0] - (p3[0] - p1[0]) / 6.0
+        c2y = p2[1] - (p3[1] - p1[1]) / 6.0
+        d.append(f"C {c1x:.3f} {c1y:.3f}, {c2x:.3f} {c2y:.3f}, {p2[0]:.3f} {p2[1]:.3f}")
+    if closed:
+        d.append("Z")
+    return " ".join(d)
+
+
 def graph_to_primitives(graph: Dict[str, Any]) -> List[Dict[str, Any]]:
     out: List[Dict[str, Any]] = []
     for e in graph.get("edges", []):
@@ -109,11 +148,9 @@ def export_svg(path: str | Path, primitives: List[Dict[str, Any]], width: int, h
         elif t == "bspline":
             ctrl = p.get("control_points", [])
             if len(ctrl) >= 2:
-                pts = " ".join([f"{float(x):.3f},{float(y):.3f}" for x, y in ctrl])
-                if bool(p.get("closed", False)):
-                    parts.append(f'<polygon points="{pts}" />')
-                else:
-                    parts.append(f'<polyline points="{pts}" />')
+                d = _bspline_svg_path(ctrl, bool(p.get("closed", False)))
+                if d:
+                    parts.append(f'<path d="{d}" />')
 
     parts.append("</g></svg>")
     content = "\n".join(parts)
