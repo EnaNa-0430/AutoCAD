@@ -1,0 +1,126 @@
+{
+  "sample_id": "demo7",
+  "selected": [
+    {
+      "segment_id": "0_0",
+      "contour_id": 0,
+      "type": "bspline",
+      "params": {
+        "degree": 3,
+        "closed": true,
+        "control_points": [
+          [
+            1264.0,
+            391.0
+          ],
+          [
+            1223.0,
+            343.0
+          ],
+          [
+            1194.0,
+            332.0
+          ],
+          [
+            1159.0,
+            365.0
+          ],
+          [
+            1112.0,
+            442.0
+          ],
+          [
+            1204.0,
+            453.0
+          ],
+          [
+            1230.0,
+            450.0
+          ],
+          [
+            1246.0,
+            435.0
+          ]
+        ],
+        "approx_eps_ratio": 0.01,
+        "stroke_inlier_ratio": 0.55
+      },
+      "param_count": 16,
+      "rmse": 1.2628764448964345,
+      "score": 268.85569558997537,
+      "inlier_ratio": null,
+      "inlier_count": null
+    },
+    {
+      "segment_id": "1_1",
+      "contour_id": 1,
+      "type": "ellipse",
+      "params": {
+        "cx": 655.0223999023438,
+        "cy": 518.5213623046875,
+        "ax": 346.5421447753906,
+        "by": 412.048095703125,
+        "angle": 89.99468994140625
+      },
+      "param_count": 5,
+      "rmse": 0.49200701727522833,
+      "score": -3017.126578409266,
+      "inlier_ratio": 1.0,
+      "inlier_count": 2154
+    },
+    {
+      "segment_id": "2_2",
+      "contour_id": 2,
+      "type": "bspline",
+      "params": {
+        "degree": 3,
+        "closed": false,
+        "control_points": [
+          [
+            549.0,
+            483.0
+          ],
+          [
+            635.0,
+            713.0
+          ],
+          [
+            913.0,
+            713.0
+          ],
+          [
+            999.0,
+            483.0
+          ]
+        ],
+        "approx_eps_ratio": 0.01,
+        "stroke_inlier_ratio": 0.55
+      },
+      "param_count": 8,
+      "rmse": 0.44348887702585543,
+      "score": -1148.893636667383,
+      "inlier_ratio": null,
+      "inlier_count": null
+    },
+    {
+      "segment_id": "2_3",
+      "contour_id": 2,
+      "type": "line",
+      "params": {
+        "p1": [
+          548.7028287424835,
+          482.52476097336876
+        ],
+        "p2": [
+          775.2798025887083,
+          340.8482069566418
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.2725186328922024,
+      "score": -1160.420622567629,
+      "inlier_ratio": 0.5055432372505543,
+      "inlier_count": 228
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "sample_id": "demo8",
+  "selected": [
+    {
+      "segment_id": "0_0",
+      "contour_id": 0,
+      "type": "line",
+      "params": {
+        "p1": [
+          1150.91772128851,
+          1099.0667348534869
+        ],
+        "p2": [
+          1221.5628306581225,
+          1186.1656748142354
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.5780509532608127,
+      "score": -168.49090228166605,
+      "inlier_ratio": 0.5276073619631901,
+      "inlier_count": 86
+    },
+    {
+      "segment_id": "0_1",
+      "contour_id": 0,
+      "type": "line",
+      "params": {
+        "p1": [
+          1153.9542306276533,
+          1095.7809757647012
+        ],
+        "p2": [
+          1262.597971848844,
+          1073.0762781908784
+        ]
+      },
+      "param_count": 2,
+      "rmse": 0.6181787035925483,
+      "score": -207.51397528160604,
+      "inlier_ratio": 0.4845814977973568,
+      "inlier_count": 110
+    },
+    {
+      "segment_id": "1_2",
+      "contour_id": 1,
+      "type": "ellipse",
+      "params": {
+        "cx": 774.4185180664062,
+        "cy": 829.5689697265625,
+        "ax": 346.3587646484375,
+        "by": 412.1539306640625,
+        "angle": 135.00782775878906
+      },
+      "param_count": 5,
+      "rmse": 0.559045543384864,
+      "score": -2457.545646291692,
+      "inlier_ratio": 0.97856477166822,
+      "inlier_count": 2100
+    },
+    {
+      "segment_id": "2_3",
+      "contour_id": 2,
+      "type": "bspline",
+      "params": {
+        "degree": 3,
+        "closed": true,
+        "control_points": [
+          [
+            725.0,
+            729.0
+          ],
+          [
+            623.0,
+            953.0
+          ],
+          [
+            819.0,
+            1149.0
+          ],
+          [
+            1042.0,
+            1049.0
+          ],
+          [
+            984.0,
+            789.0
+          ]
+        ],
+        "approx_eps_ratio": 0.01,
+        "stroke_inlier_ratio": 0.55
+      },
+      "param_count": 10,
+      "rmse": 0.7049905333253836,
+      "score": -741.8238019106421,
+      "inlier_ratio": null,
+      "inlier_count": null
+    }
+  ]
+}

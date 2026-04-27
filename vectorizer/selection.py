@@ -34,6 +34,7 @@ def select_models(
     min_inlier_ratio_ellipse = float(cfg.get("min_inlier_ratio_ellipse", 0.72))
     bspline_prefer_ratio = float(cfg.get("bspline_prefer_ratio", 0.9))
     bspline_prefer_rmse_min = float(cfg.get("bspline_prefer_rmse_min", 0.6))
+    bspline_override_rmse_gate = float(cfg.get("bspline_override_rmse_gate", rmse_accept_curve))
     stroke_like_bspline_ratio = float(cfg.get("stroke_like_bspline_ratio", 2.6))
     stroke_like_line_rmse_max = float(cfg.get("stroke_like_line_rmse_max", 0.35))
     arc_prefer_ratio = float(cfg.get("arc_prefer_ratio", 1.15))
@@ -197,17 +198,21 @@ def select_models(
 
             if bspline:
                 best_bspline = min(bspline, key=lambda c: float(c["rmse"]))
-                if float(best["rmse"]) >= bspline_prefer_rmse_min and float(best_bspline["rmse"]) <= float(best["rmse"]) * bspline_prefer_ratio:
-                    best = best_bspline
-                    best_score = _score_candidate(best, criterion, n, lam)
-                elif (not line_like) and best.get("type") == "line" and float(best_bspline["rmse"]) <= float(best["rmse"]) * 1.2:
+                best_rmse = float(best["rmse"])
+                bs_rmse = float(best_bspline["rmse"])
+                # Prefer analytic geometry when already accurate enough; use bspline as fallback.
+                if (
+                    best_rmse >= bspline_prefer_rmse_min
+                    and best_rmse > bspline_override_rmse_gate
+                    and bs_rmse <= best_rmse * bspline_prefer_ratio
+                ):
                     best = best_bspline
                     best_score = _score_candidate(best, criterion, n, lam)
                 elif (
                     stroke_like
                     and best.get("type") == "line"
-                    and float(best["rmse"]) > stroke_like_line_rmse_max
-                    and float(best_bspline["rmse"]) <= float(best["rmse"]) * stroke_like_bspline_ratio
+                    and best_rmse > stroke_like_line_rmse_max
+                    and bs_rmse <= best_rmse * stroke_like_bspline_ratio
                 ):
                     best = best_bspline
                     best_score = _score_candidate(best, criterion, n, lam)
@@ -244,6 +249,7 @@ def select_models(
         "min_inlier_ratio_ellipse": min_inlier_ratio_ellipse,
         "bspline_prefer_ratio": bspline_prefer_ratio,
         "bspline_prefer_rmse_min": bspline_prefer_rmse_min,
+        "bspline_override_rmse_gate": bspline_override_rmse_gate,
         "stroke_like_bspline_ratio": stroke_like_bspline_ratio,
         "stroke_like_line_rmse_max": stroke_like_line_rmse_max,
         "arc_prefer_ratio": arc_prefer_ratio,

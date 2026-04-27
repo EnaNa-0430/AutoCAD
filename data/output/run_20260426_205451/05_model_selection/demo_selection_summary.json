@@ -1,0 +1,28 @@
+{
+  "criterion": "bic",
+  "rmse_max": 3.0,
+  "rmse_accept_curve": 2.5,
+  "prefer_curve_ratio": 1.2,
+  "circle_min_coverage": 0.7,
+  "line_like_line_rmse_max": 2.0,
+  "min_inlier_ratio_default": 0.5,
+  "min_inlier_ratio_line": 0.45,
+  "min_inlier_ratio_arc": 0.5,
+  "min_inlier_ratio_circle": 0.65,
+  "min_inlier_ratio_ellipse": 0.72,
+  "bspline_prefer_ratio": 0.9,
+  "bspline_prefer_rmse_min": 0.6,
+  "bspline_override_rmse_gate": 2.5,
+  "stroke_like_bspline_ratio": 2.6,
+  "stroke_like_line_rmse_max": 0.35,
+  "arc_prefer_ratio": 1.15,
+  "arc_prefer_min_coverage": 0.25,
+  "arc_prefer_max_coverage": 0.8,
+  "selected_count": 5,
+  "type_distribution": {
+    "bspline": 1,
+    "arc": 2,
+    "ellipse": 1,
+    "circle": 1
+  }
+}

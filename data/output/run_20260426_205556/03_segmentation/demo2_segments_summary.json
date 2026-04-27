@@ -1,0 +1,15 @@
+{
+  "segment_count": 7,
+  "avg_breakpoints_per_contour": 2.0,
+  "corner_angle_deg": 110.0,
+  "corner_window": 6,
+  "corner_min_gap": 12,
+  "stroke_like_elongation_min": 2.2,
+  "polygon_fallback_enabled": true,
+  "polygon_fallback_min_raw_corners": 2,
+  "polygon_fallback_eps_ratio": 0.01,
+  "polygon_fallback_min_vertices": 3,
+  "polygon_fallback_max_vertices": 6,
+  "polygon_fallback_used": 0,
+  "min_segment_points": 20
+}

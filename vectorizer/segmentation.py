@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Tuple
 
+import cv2
 import numpy as np
 
 
@@ -59,6 +60,41 @@ def _closed_indices(start: int, end: int, n: int) -> List[int]:
         out.append(i)
         if len(out) > n + 1:
             break
+    return out
+
+
+def _nearest_point_index(points: np.ndarray, p: np.ndarray) -> int:
+    d2 = np.sum((points - p.reshape(1, 2)) ** 2, axis=1)
+    return int(np.argmin(d2))
+
+
+def _polygon_fallback_corners(
+    points: np.ndarray,
+    min_gap: int,
+    eps_ratio: float,
+    min_vertices: int,
+    max_vertices: int,
+) -> List[int]:
+    if len(points) < max(6, min_vertices):
+        return []
+    contour = points.astype(np.float32).reshape(-1, 1, 2)
+    arc_len = float(cv2.arcLength(contour, True))
+    eps = max(1.0, arc_len * float(eps_ratio))
+    approx = cv2.approxPolyDP(contour, epsilon=eps, closed=True).reshape(-1, 2).astype(np.float64)
+    if len(approx) < int(min_vertices) or len(approx) > int(max_vertices):
+        return []
+    mapped = sorted(set(_nearest_point_index(points, v) for v in approx))
+    if not mapped:
+        return []
+    out: List[int] = []
+    for idx in mapped:
+        if not out or abs(idx - out[-1]) >= min_gap:
+            out.append(int(idx))
+    n = len(points)
+    if len(out) > 1 and (n - out[-1] + out[0]) < min_gap:
+        out.pop()
+    if len(out) < int(min_vertices):
+        return []
     return out
 
 
@@ -157,9 +193,15 @@ def segment_contours(contours: List[Dict[str, Any]], cfg: Dict[str, Any]) -> Tup
     window = int(cfg.get("corner_window", 6))
     min_gap = int(cfg.get("corner_min_gap", 12))
     stroke_like_elongation_min = float(cfg.get("stroke_like_elongation_min", 2.2))
+    polygon_fallback_enabled = bool(cfg.get("polygon_fallback_enabled", True))
+    polygon_fallback_min_raw_corners = int(cfg.get("polygon_fallback_min_raw_corners", 2))
+    polygon_fallback_eps_ratio = float(cfg.get("polygon_fallback_eps_ratio", 0.01))
+    polygon_fallback_min_vertices = int(cfg.get("polygon_fallback_min_vertices", 3))
+    polygon_fallback_max_vertices = int(cfg.get("polygon_fallback_max_vertices", 6))
 
     segments: List[Dict[str, Any]] = []
     total_breaks = 0
+    polygon_fallback_used = 0
     for contour in contours:
         pts = np.array(contour["points"], dtype=np.float64)
         if len(pts) < min_points:
@@ -167,6 +209,21 @@ def segment_contours(contours: List[Dict[str, Any]], cfg: Dict[str, Any]) -> Tup
         is_parent_closed = bool(contour.get("closed", False))
         n = len(pts)
         corners = _pick_corners(pts, is_parent_closed, angle_th, window, min_gap)
+        if (
+            is_parent_closed
+            and polygon_fallback_enabled
+            and polygon_fallback_min_raw_corners <= len(corners) < 3
+        ):
+            fb = _polygon_fallback_corners(
+                pts,
+                min_gap=min_gap,
+                eps_ratio=polygon_fallback_eps_ratio,
+                min_vertices=polygon_fallback_min_vertices,
+                max_vertices=polygon_fallback_max_vertices,
+            )
+            if len(fb) > len(corners):
+                corners = fb
+                polygon_fallback_used += 1
         total_breaks += len(corners)
         elongation = _elongation_ratio(pts)
         stroke_like_closed = bool(is_parent_closed and len(corners) <= 2 and elongation >= stroke_like_elongation_min)
@@ -253,6 +310,12 @@ def segment_contours(contours: List[Dict[str, Any]], cfg: Dict[str, Any]) -> Tup
         "corner_window": window,
         "corner_min_gap": min_gap,
         "stroke_like_elongation_min": stroke_like_elongation_min,
+        "polygon_fallback_enabled": polygon_fallback_enabled,
+        "polygon_fallback_min_raw_corners": polygon_fallback_min_raw_corners,
+        "polygon_fallback_eps_ratio": polygon_fallback_eps_ratio,
+        "polygon_fallback_min_vertices": polygon_fallback_min_vertices,
+        "polygon_fallback_max_vertices": polygon_fallback_max_vertices,
+        "polygon_fallback_used": polygon_fallback_used,
         "min_segment_points": min_points,
     }
     return segments, meta

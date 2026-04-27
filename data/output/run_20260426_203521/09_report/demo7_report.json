@@ -1,0 +1,110 @@
+{
+  "sample_id": "demo7",
+  "timings_sec": {
+    "load": 0.00837389999999999,
+    "m1_preprocess": 0.020384400000000025,
+    "m2_contours": 0.020917200000000025,
+    "m3_segmentation": 0.05173430000000001,
+    "m4_fitting": 16.767803999999998,
+    "m5_selection": 0.002946100000002616,
+    "m6_topology": 0.0030648999999982607,
+    "m7_m8_export": 0.015113100000000657
+  },
+  "metrics": {
+    "global_rmse": 191.51219997605483,
+    "primitive_count": 13,
+    "param_total": 29
+  },
+  "extras": {
+    "contour_summary": {
+      "canny_t1": 40,
+      "canny_t2": 120,
+      "min_contour_len": 30,
+      "retrieval_mode": "tree",
+      "dedupe_nested_boundaries": true,
+      "keep_depth_parity": 0,
+      "contour_count_raw": 6,
+      "contour_count": 3,
+      "contour_length_min": 373,
+      "contour_length_max": 2154,
+      "contour_length_mean": 1238.3333333333333
+    },
+    "segment_summary": {
+      "segment_count": 13,
+      "avg_breakpoints_per_contour": 4.333333333333333,
+      "corner_angle_deg": 110.0,
+      "corner_window": 6,
+      "corner_min_gap": 12,
+      "stroke_like_elongation_min": 2.2,
+      "polygon_fallback_enabled": true,
+      "polygon_fallback_eps_ratio": 0.01,
+      "polygon_fallback_min_vertices": 3,
+      "polygon_fallback_max_vertices": 10,
+      "polygon_fallback_used": 2,
+      "min_segment_points": 20
+    },
+    "fit_summary": {
+      "segment_count": 13,
+      "candidate_total": 55,
+      "ransac_iter": 150,
+      "inlier_threshold": 1.5,
+      "model_order_closed": [
+        "circle",
+        "ellipse",
+        "arc",
+        "line"
+      ],
+      "model_order_open": [
+        "line",
+        "arc",
+        "circle",
+        "ellipse"
+      ],
+      "bspline_approx_eps_ratio": 0.01,
+      "bspline_backtrack_drop_ratio": 0.12,
+      "bspline_backtrack_drop_abs": 20.0,
+      "bspline_head_keep_span_min": 30.0,
+      "bspline_head_keep_ratio_min": 0.8,
+      "bspline_stroke_inlier_ratio": 0.55,
+      "bspline_stroke_rebound_abs": 18.0,
+      "bspline_stroke_rebound_tail_max_points": 3,
+      "bspline_stroke_spur_max_drop_each_side": 2,
+      "bspline_stroke_spur_improve_ratio": 0.02,
+      "bspline_stroke_smooth_samples": 96,
+      "bspline_stroke_smooth_passes": 3,
+      "ellipse_axis_bbox_ratio_max": 2.5
+    },
+    "selection_summary": {
+      "criterion": "bic",
+      "rmse_max": 3.0,
+      "rmse_accept_curve": 2.5,
+      "prefer_curve_ratio": 1.2,
+      "circle_min_coverage": 0.7,
+      "line_like_line_rmse_max": 2.0,
+      "min_inlier_ratio_default": 0.5,
+      "min_inlier_ratio_line": 0.45,
+      "min_inlier_ratio_arc": 0.5,
+      "min_inlier_ratio_circle": 0.65,
+      "min_inlier_ratio_ellipse": 0.72,
+      "bspline_prefer_ratio": 0.9,
+      "bspline_prefer_rmse_min": 0.6,
+      "bspline_override_rmse_gate": 2.5,
+      "stroke_like_bspline_ratio": 2.6,
+      "stroke_like_line_rmse_max": 0.35,
+      "arc_prefer_ratio": 1.15,
+      "arc_prefer_min_coverage": 0.25,
+      "arc_prefer_max_coverage": 0.8,
+      "selected_count": 13,
+      "type_distribution": {
+        "line": 12,
+        "ellipse": 1
+      }
+    },
+    "topology_summary": {
+      "node_count": 16,
+      "edge_count": 13,
+      "snap_eps": 2.0,
+      "close_eps": 3.0
+    }
+  }
+}
